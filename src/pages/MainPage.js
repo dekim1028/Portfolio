@@ -1,7 +1,7 @@
 import React from 'react';
-import MainContainer from '../container/MainContainer';
+import MainContainer from '../container/content/main/MainContainer';
 import Background from '../component/common/Background';
-import MenuContainer from '../container/MenuContainer';
+import MenuContainer from '../container/common/MenuContainer';
 
 const MainPage = () => {
 	return (

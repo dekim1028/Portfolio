@@ -1,6 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const MainBlock = styled.div`
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+`;
+
 const ProfileBlock = styled.div`
 	height: 100vh;
 	display: flex;
@@ -29,18 +36,20 @@ const Text = styled.h1`
 	color: white;
 `;
 
-const Profile = () => {
+const Main = () => {
 	return (
-		<ProfileBlock>
-			<div data-aos="fade-up">
-				<ProfileImageBox>
-					<ProfileImage src="/image/common/profile.jpeg" />
-				</ProfileImageBox>
-				<Text>Front-End Developer</Text>
-				<Text>Daeun Kim</Text>
-			</div>
-		</ProfileBlock>
+		<MainBlock>
+			<ProfileBlock>
+				<div data-aos="fade-up">
+					<ProfileImageBox>
+						<ProfileImage src="/image/common/profile.jpeg" />
+					</ProfileImageBox>
+					<Text>Front-End Developer</Text>
+					<Text>Daeun Kim</Text>
+				</div>
+			</ProfileBlock>
+		</MainBlock>
 	);
 };
 
-export default Profile;
+export default Main;

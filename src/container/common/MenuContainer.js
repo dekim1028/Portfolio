@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Menu from '../component/Menu';
+import Menu from '../../component/common/Menu';
 
 const MenuContainer = () => {
 	const [showMenu, setShowMenu] = useState(false);
