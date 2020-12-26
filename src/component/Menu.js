@@ -8,6 +8,7 @@ import {
 	FcList,
 	FcCommandLine,
 } from 'react-icons/fc';
+import { Link } from 'react-router-dom';
 
 const MenuBlock = styled.div`
 	width: 100%;
@@ -76,7 +77,7 @@ const MenuList = styled.div`
 	}
 `;
 
-const MenuItemBlock = styled.div`
+const MenuItemBlock = styled(Link)`
 	margin: 0 20px;
 
 	@media (max-width: 768px) {
@@ -161,10 +162,11 @@ const Menu = ({
 			<DownBtn className={cn({ showMenu })} onClick={onShowMenu} />
 			<MenuList>
 				<MenuItemBlock
-					onMouseOver={() => onShowSpeechBubble('myInfo')}
-					onMouseOut={() => onHideSpeechBubble('myInfo')}
+					to="/introduce"
+					onMouseOver={() => onShowSpeechBubble('introduce')}
+					onMouseOut={() => onHideSpeechBubble('introduce')}
 				>
-					<SpeechBubble className={cn({ show: speechBubble.myInfo })}>
+					<SpeechBubble className={cn({ show: speechBubble.introduce })}>
 						Introduce
 					</SpeechBubble>
 					<MenuItemImage>
@@ -172,10 +174,11 @@ const Menu = ({
 					</MenuItemImage>
 				</MenuItemBlock>
 				<MenuItemBlock
-					onMouseOver={() => onShowSpeechBubble('stack')}
-					onMouseOut={() => onHideSpeechBubble('stack')}
+					to="/skill"
+					onMouseOver={() => onShowSpeechBubble('skill')}
+					onMouseOut={() => onHideSpeechBubble('skill')}
 				>
-					<SpeechBubble className={cn({ show: speechBubble.stack })}>
+					<SpeechBubble className={cn({ show: speechBubble.skill })}>
 						Skill
 					</SpeechBubble>
 					<MenuItemImage>
@@ -183,11 +186,12 @@ const Menu = ({
 					</MenuItemImage>
 				</MenuItemBlock>
 				<MenuItemBlock
-					onMouseOver={() => onShowSpeechBubble('career')}
-					onMouseOut={() => onHideSpeechBubble('career')}
+					to="/work_exp"
+					onMouseOver={() => onShowSpeechBubble('work_exp')}
+					onMouseOut={() => onHideSpeechBubble('work_exp')}
 				>
 					<SpeechBubble
-						className={cn({ show: speechBubble.career, multiline: true })}
+						className={cn({ show: speechBubble.work_exp, multiline: true })}
 					>
 						Work Experience
 					</SpeechBubble>
@@ -196,11 +200,12 @@ const Menu = ({
 					</MenuItemImage>
 				</MenuItemBlock>
 				<MenuItemBlock
-					onMouseOver={() => onShowSpeechBubble('portfolio')}
-					onMouseOut={() => onHideSpeechBubble('portfolio')}
+					to="/other_exp"
+					onMouseOver={() => onShowSpeechBubble('other_exp')}
+					onMouseOut={() => onHideSpeechBubble('other_exp')}
 				>
 					<SpeechBubble
-						className={cn({ show: speechBubble.portfolio, multiline: true })}
+						className={cn({ show: speechBubble.other_exp, multiline: true })}
 					>
 						Other Experience
 					</SpeechBubble>
@@ -209,6 +214,7 @@ const Menu = ({
 					</MenuItemImage>
 				</MenuItemBlock>
 				<MenuItemBlock
+					to="/contact"
 					onMouseOver={() => onShowSpeechBubble('contact')}
 					onMouseOut={() => onHideSpeechBubble('contact')}
 				>

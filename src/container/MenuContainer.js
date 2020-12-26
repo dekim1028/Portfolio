@@ -4,10 +4,10 @@ import Menu from '../component/Menu';
 const MenuContainer = () => {
 	const [showMenu, setShowMenu] = useState(false);
 	const [speechBubble, setSpeechBubble] = useState({
-		myInfo: false,
-		career: false,
-		stack: false,
-		portfolio: false,
+		introduce: false,
+		skill: false,
+		work_exp: false,
+		other_exp: false,
 		contact: false,
 	});
 
