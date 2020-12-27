@@ -3,11 +3,10 @@ import styled from 'styled-components';
 
 const IntroduceBlock = styled.div`
 	width: 100vw;
-	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 50px 0;
+	padding: 70px 0;
 	background: #fafafa;
 `;
 

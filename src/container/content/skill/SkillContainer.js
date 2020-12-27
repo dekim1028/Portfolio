@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import Skill from '../../component/content/skill/Skill';
+import React, { useState } from 'react';
+import Skill from '../../../component/content/skill/Skill';
 import { withRouter } from 'react-router-dom';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const SkillContainer = ({ history }) => {
 	const [menu, setMenu] = useState({
@@ -88,12 +86,6 @@ const SkillContainer = ({ history }) => {
 			},
 		});
 	};
-
-	useEffect(() => {
-		AOS.init({
-			duration: 1000,
-		});
-	}, []);
 
 	return (
 		<Skill
