@@ -1,14 +1,10 @@
 import { Route } from 'react-router-dom';
-import MainPage from './pages/MainPage';
-import IntroducePage from './pages/IntroducePage';
-import SkillPage from './pages/SkillPage';
+import Page from './pages/Page';
 
 function App() {
 	return (
 		<>
-			<Route path="/" component={MainPage} exact />
-			<Route path="/introduce" component={IntroducePage} />
-			<Route path="/skill" component={SkillPage} />
+			<Route path="/" component={Page} exact />
 		</>
 	);
 }

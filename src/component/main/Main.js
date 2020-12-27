@@ -2,10 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const MainBlock = styled.div`
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
+	background-image: url('/image/common/background.png');
+	background-size: cover;
+	background-repeat: no-repeat;
 `;
 
 const ProfileBlock = styled.div`

@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import cn from 'classnames';
 import { IoIosClose, IoIosAdd } from 'react-icons/io';
 import { BsQuestionCircle } from 'react-icons/bs';
+import Hard from './Hard';
+import Soft from './Soft';
+import Progressing from './Progressing';
 
 const SkillBlock = styled.div`
 	width: 100%;
@@ -147,6 +150,11 @@ const SpeechBubble = styled.div`
 	}
 `;
 
+const Content = styled.div`
+	width: 100%;
+	padding: 20px;
+`;
+
 const Skill = ({ menu, onClose, onClickMenu, onHoverMenu, onOutMenu }) => {
 	return (
 		<SkillBlock data-aos="zoom-in">
@@ -204,6 +212,11 @@ const Skill = ({ menu, onClose, onClickMenu, onHoverMenu, onOutMenu }) => {
 						</SheetItem>
 					</SheetList>
 				</SheetBlock>
+				<Content>
+					<Hard show={menu.hard.click} />
+					<Soft show={menu.soft.click} />
+					<Progressing show={menu.progressing.click} />
+				</Content>
 			</Wrap>
 		</SkillBlock>
 	);

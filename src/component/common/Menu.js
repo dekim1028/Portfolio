@@ -8,44 +8,44 @@ import {
 	FcList,
 	FcCommandLine,
 } from 'react-icons/fc';
-import { Link } from 'react-router-dom';
 
 const MenuBlock = styled.div`
-	width: 100%;
-	height: 130px;
+	width: 125px;
+	height: 100%;
 	position: fixed;
-	bottom: -80px;
+	top: 0;
+	right: -80px;
+	display: flex;
+	align-items: center;
 	transition: 1s;
 	&.showMenu {
-		bottom: 0px;
+		right: 0px;
 	}
 `;
 
 const DownBtn = styled(CgPushChevronDown)`
 	position: relative;
-	left: 50%;
-	right: 0;
-	transform: translate(-50%, -50%);
+	transform: rotate(270deg) translateY(-50%);
 	margin: 0 auto;
-	color: rgba(255, 255, 255, 0.5);
+	color: rgba(0, 0, 0, 0.5);
 	font-size: 35px;
 	transition: 1s;
 
 	@keyframes move {
 		0% {
-			top: 20px;
+			left: 20px;
 		}
 		25% {
-			top: 18px;
+			left: 18px;
 		}
 		50% {
-			top: 15px;
+			left: 15px;
 		}
 		75% {
-			top: 12px;
+			left: 12px;
 		}
 		100% {
-			top: 10px;
+			left: 10px;
 		}
 	}
 
@@ -57,32 +57,24 @@ const DownBtn = styled(CgPushChevronDown)`
 
 	&.showMenu {
 		animation-play-state: paused;
-		bottom: 100px !important;
 	}
 `;
 
 const MenuList = styled.div`
-	width: 600px;
-	height: 90px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0 auto;
-	background: rgba(255, 255, 255, 0.3);
+	width: 90px;
+	height: 380px;
+	background: rgba(0, 0, 0, 0.3);
 	border-radius: 20px;
 	padding: 10px;
 
 	@media (max-width: 768px) {
-		width: 90%;
+		width: 70px;
+		height: 330px;
 	}
 `;
 
-const MenuItemBlock = styled(Link)`
-	margin: 0 20px;
-
-	@media (max-width: 768px) {
-		margin: 0 5px;
-	}
+const MenuItemBlock = styled.a`
+	margin: 10px 0;
 `;
 
 const MenuItemImage = styled.div`
@@ -91,13 +83,15 @@ const MenuItemImage = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: rgba(255, 255, 255, 0.4);
+	margin: 10px auto;
+	background: rgba(0, 0, 0, 0.4);
 	border-radius: 10px;
 	font-size: 50px;
 	transition: 0.3s;
+	color: white;
 
 	&:hover {
-		background: rgba(255, 255, 255, 0.6);
+		background: rgba(0, 0, 0, 0.6);
 	}
 
 	@media (max-width: 768px) {
@@ -109,8 +103,7 @@ const MenuItemImage = styled.div`
 const SpeechBubble = styled.div`
 	width: 100px;
 	position: absolute;
-	top: 10px;
-	transform: translate(-20px, 0px);
+	transform: translate(-110px, 15px);
 	padding: 5px;
 	background: rgba(255, 255, 255, 0.8);
 	border-radius: 5px;
@@ -127,21 +120,20 @@ const SpeechBubble = styled.div`
 		width: 0;
 		height: 0;
 		position: absolute;
-		bottom: -74%;
-		left: 25px;
-		transform: translate(15px, 3px);
+		left: 85%;
+		transform: scaleY(0.8) translate(15px, -3px);
 		content: ' ';
 		border: solid transparent;
 		border-color: rgba(56, 77, 157, 0);
-		border-top-color: rgba(255, 255, 255, 0.8);
+		border-left-color: rgba(255, 255, 255, 0.8);
 		border-width: 11px;
 		pointer-events: none;
 	}
 
 	&.multiline {
-		top: -6px;
+		transform: translate(-110px, 7px);
 		&:before {
-			bottom: -45%;
+			bottom: 6px;
 		}
 	}
 
@@ -162,7 +154,7 @@ const Menu = ({
 			<DownBtn className={cn({ showMenu })} onClick={onShowMenu} />
 			<MenuList>
 				<MenuItemBlock
-					to="/introduce"
+					href="#introduce"
 					onMouseOver={() => onShowSpeechBubble('introduce')}
 					onMouseOut={() => onHideSpeechBubble('introduce')}
 				>
@@ -174,7 +166,7 @@ const Menu = ({
 					</MenuItemImage>
 				</MenuItemBlock>
 				<MenuItemBlock
-					to="/skill"
+					href="#skill"
 					onMouseOver={() => onShowSpeechBubble('skill')}
 					onMouseOut={() => onHideSpeechBubble('skill')}
 				>
@@ -186,7 +178,7 @@ const Menu = ({
 					</MenuItemImage>
 				</MenuItemBlock>
 				<MenuItemBlock
-					to="/work_exp"
+					href="#work_exp"
 					onMouseOver={() => onShowSpeechBubble('work_exp')}
 					onMouseOut={() => onHideSpeechBubble('work_exp')}
 				>
@@ -200,7 +192,7 @@ const Menu = ({
 					</MenuItemImage>
 				</MenuItemBlock>
 				<MenuItemBlock
-					to="/other_exp"
+					href="#other_exp"
 					onMouseOver={() => onShowSpeechBubble('other_exp')}
 					onMouseOut={() => onHideSpeechBubble('other_exp')}
 				>
@@ -214,7 +206,7 @@ const Menu = ({
 					</MenuItemImage>
 				</MenuItemBlock>
 				<MenuItemBlock
-					to="/contact"
+					href="#contact"
 					onMouseOver={() => onShowSpeechBubble('contact')}
 					onMouseOut={() => onHideSpeechBubble('contact')}
 				>
