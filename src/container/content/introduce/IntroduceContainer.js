@@ -9,6 +9,7 @@ const IntroduceContainer = ({ history }) => {
 		myinfo: true,
 		introduce: false,
 	});
+
 	const onClose = () => {
 		history.push('/');
 	};

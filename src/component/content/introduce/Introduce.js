@@ -42,6 +42,7 @@ const CloseBtn = styled.button`
 	border-radius: 10px;
 	outline: none;
 	background: #df0101;
+	cursor: pointer;
 
 	svg {
 		font-size: 17px;
