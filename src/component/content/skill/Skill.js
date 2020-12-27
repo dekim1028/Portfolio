@@ -30,12 +30,28 @@ const Title = styled.h1`
 	text-align: right;
 `;
 
+const SkillList = styled.ul`
+	color: white;
+`;
+
+const SkillListItem = styled.li``;
+
 const Skill = ({ menu, onClose, onClickMenu, onHoverMenu, onOutMenu }) => {
 	return (
 		<SkillBlock id="skill">
 			<Wrap>
 				<Content data-aos="fade-left">
 					<Title>Skill</Title>
+					<SkillList>
+						<SkillListItem>
+							Front-End: JavaScript, React.js, HTML/CSS
+						</SkillListItem>
+						<SkillListItem>
+							Back-End: Java, Spring, Node.js, AWS (EC2, Route53)
+						</SkillListItem>
+						<SkillListItem>Database: MySql, Oracle, MongoDB</SkillListItem>
+						<SkillListItem>Server: NginX, tomcat7, Apache</SkillListItem>
+					</SkillList>
 				</Content>
 			</Wrap>
 		</SkillBlock>
