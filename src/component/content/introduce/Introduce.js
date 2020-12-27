@@ -16,10 +16,11 @@ const Content = styled.div`
 `;
 
 const Title = styled.h1`
-	width: fit-content;
 	margin: 0;
+	padding-bottom: 5px;
 	border-bottom: 3px solid rgb(217, 115, 13);
 	color: rgb(217, 115, 13);
+	text-align: left;
 `;
 
 const BasicInfo = styled.div`
@@ -56,7 +57,7 @@ const Introduce = () => {
 	return (
 		<IntroduceBlock id="introduce">
 			<Content data-aos="fade-right">
-				<Title>Introduce.</Title>
+				<Title>Introduce</Title>
 				<BasicInfo>
 					<img src="/image/common/profile.jpeg" alt="profile" />
 					<div>

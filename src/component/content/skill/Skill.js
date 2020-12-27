@@ -12,8 +12,34 @@ const SkillBlock = styled.div`
 	transform: skewY(-5deg);
 `;
 
+const Wrap = styled.div`
+	width: 45%;
+	height: 100%;
+	transform: skewY(5deg);
+`;
+
+const Content = styled.div`
+	padding: 40px 0;
+`;
+
+const Title = styled.h1`
+	margin: 0;
+	padding-bottom: 5px;
+	border-bottom: 3px solid white;
+	color: white;
+	text-align: right;
+`;
+
 const Skill = ({ menu, onClose, onClickMenu, onHoverMenu, onOutMenu }) => {
-	return <SkillBlock id="skill"></SkillBlock>;
+	return (
+		<SkillBlock id="skill">
+			<Wrap>
+				<Content data-aos="fade-left">
+					<Title>Skill</Title>
+				</Content>
+			</Wrap>
+		</SkillBlock>
+	);
 };
 
 export default Skill;
