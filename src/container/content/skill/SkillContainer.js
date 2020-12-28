@@ -4,25 +4,12 @@ import { withRouter } from 'react-router-dom';
 
 const SkillContainer = ({ history }) => {
 	const [menu, setMenu] = useState({
-		hard: {
-			click: true,
-			hover: false,
-		},
-		soft: {
-			click: false,
-			hover: false,
-		},
-		progressing: {
-			click: false,
-			hover: false,
-		},
+		hard: false,
+		soft: false,
+		tried: false,
 	});
 
-	const onClose = () => {
-		history.push('/');
-	};
-
-	const onClickMenu = (e) => {
+	const onMouseOverMenu = (e) => {
 		const { id } = e.target;
 
 		let updateMenu = {};
@@ -30,18 +17,12 @@ const SkillContainer = ({ history }) => {
 			if (key === id) {
 				updateMenu = {
 					...updateMenu,
-					[key]: {
-						...menu[key],
-						click: true,
-					},
+					[key]: true,
 				};
 			} else {
 				updateMenu = {
 					...updateMenu,
-					[key]: {
-						...menu[key],
-						click: false,
-					},
+					[key]: false,
 				};
 			}
 		}
@@ -49,51 +30,19 @@ const SkillContainer = ({ history }) => {
 		setMenu(updateMenu);
 	};
 
-	const onHoverMenu = (e) => {
-		const { id } = e.target;
-
-		let updateMenu = {};
-		for (let key in menu) {
-			if (key === id) {
-				updateMenu = {
-					...updateMenu,
-					[key]: {
-						...menu[key],
-						hover: true,
-					},
-				};
-			} else {
-				updateMenu = {
-					...updateMenu,
-					[key]: {
-						...menu[key],
-						hover: false,
-					},
-				};
-			}
-		}
-
-		setMenu(updateMenu);
-	};
-
-	const onOutMenu = (e) => {
+	const onMouseOutMenu = (e) => {
 		const { id } = e.target;
 		setMenu({
 			...menu,
-			[id]: {
-				...menu[id],
-				hover: false,
-			},
+			[id]: false,
 		});
 	};
 
 	return (
 		<Skill
 			menu={menu}
-			onClose={onClose}
-			onClickMenu={onClickMenu}
-			onHoverMenu={onHoverMenu}
-			onOutMenu={onOutMenu}
+			onMouseOverMenu={onMouseOverMenu}
+			onMouseOutMenu={onMouseOutMenu}
 		/>
 	);
 };
