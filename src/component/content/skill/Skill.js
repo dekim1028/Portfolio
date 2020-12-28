@@ -25,8 +25,9 @@ const SkillBlock = styled.div`
 	align-items: center;
 	justify-content: center;
 	padding: 50px 0;
-	background: rgb(217, 115, 13);
+	background: #fcae44;
 	transform: skewY(-5deg);
+	box-shadow: 0px 1px 15px #6e6e6e;
 `;
 
 const Wrap = styled.div`
