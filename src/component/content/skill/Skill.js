@@ -30,9 +30,13 @@ const SkillBlock = styled.div`
 `;
 
 const Wrap = styled.div`
-	width: 45%;
+	width: 50%;
 	height: 100%;
 	transform: skewY(5deg);
+
+	@media (max-width: 768px) {
+		width: 90%;
+	}
 `;
 
 const Content = styled.div`
@@ -55,15 +59,32 @@ const SkillList = styled.ul`
 	padding: 0;
 	list-style: none;
 	color: white;
+
+	@media (max-width: 768px) {
+		padding: 0 10px;
+		display: block;
+	}
 `;
 
 const SkillListItem = styled.li`
 	width: 33%;
 	height: 570px;
 	padding: 0 10px;
+
+	@media (max-width: 768px) {
+		width: 100%;
+		height: auto;
+
+		&:not(:last-child) {
+			border-bottom: 1px dashed;
+		}
+	}
 `;
 
-const SubTitle = styled.h2`
+const SubTitle = styled.div`
+	display: flex;
+	align-items: center;
+
 	svg {
 		margin-left: 10px;
 		font-size: 20px;
@@ -81,6 +102,11 @@ const Item = styled.div`
 		margin-right: 10px;
 		font-size: 25px;
 	}
+
+	@media (max-width: 768px) {
+		padding: 0;
+		padding-bottom: 40px;
+	}
 `;
 
 const SpeechBubble = styled.div`
@@ -93,12 +119,15 @@ const SpeechBubble = styled.div`
 	color: white;
 	font-size: 9pt;
 	z-index: 2;
-	display: none;
+	visibility: hidden;
 
 	&.show {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		visibility: visible;
+	}
+
+	@media (max-width: 768px) {
+		position: relative;
+		top: -10px;
 	}
 `;
 
@@ -110,17 +139,19 @@ const Skill = ({ menu, onMouseOverMenu, onMouseOutMenu }) => {
 					<Title>Skill</Title>
 					<SkillList>
 						<SkillListItem>
-							<SubTitle>
-								Hard Skill
-								<VscQuestion
-									id="hard"
-									onMouseOver={onMouseOverMenu}
-									onMouseOut={onMouseOutMenu}
-								/>
+							<div>
+								<SubTitle>
+									<h2>Hard Skill</h2>
+									<VscQuestion
+										id="hard"
+										onMouseOver={onMouseOverMenu}
+										onMouseOut={onMouseOutMenu}
+									/>
+								</SubTitle>
 								<SpeechBubble className={cn({ show: menu.hard })}>
 									프로젝트에 적용 가능하며 자주 사용하는 기술
 								</SpeechBubble>
-							</SubTitle>
+							</div>
 							<Item>
 								<SiReact />
 								React.js
@@ -151,17 +182,19 @@ const Skill = ({ menu, onMouseOverMenu, onMouseOutMenu }) => {
 							</Item>
 						</SkillListItem>
 						<SkillListItem>
-							<SubTitle>
-								Soft Skill
-								<VscQuestion
-									id="soft"
-									onMouseOver={onMouseOverMenu}
-									onMouseOut={onMouseOutMenu}
-								/>
+							<div>
+								<SubTitle>
+									<h2>Soft Skill</h2>
+									<VscQuestion
+										id="soft"
+										onMouseOver={onMouseOverMenu}
+										onMouseOut={onMouseOutMenu}
+									/>
+								</SubTitle>
 								<SpeechBubble className={cn({ show: menu.soft })}>
 									기초 지식 습득 후 복습이 필요한 기술
 								</SpeechBubble>
-							</SubTitle>
+							</div>
 							<Item>
 								<SiNodeDotJs />
 								Node.js
@@ -180,17 +213,19 @@ const Skill = ({ menu, onMouseOverMenu, onMouseOutMenu }) => {
 							</Item>
 						</SkillListItem>
 						<SkillListItem>
-							<SubTitle>
-								Tried Skill
-								<VscQuestion
-									id="tried"
-									onMouseOver={onMouseOverMenu}
-									onMouseOut={onMouseOutMenu}
-								/>
+							<div>
+								<SubTitle>
+									<h2>Tried Skill</h2>
+									<VscQuestion
+										id="tried"
+										onMouseOver={onMouseOverMenu}
+										onMouseOut={onMouseOutMenu}
+									/>
+								</SubTitle>
 								<SpeechBubble className={cn({ show: menu.tried })}>
 									습득 중인 기술
 								</SpeechBubble>
-							</SubTitle>
+							</div>
 							<Item>
 								<SiVueDotJs />
 								Vue.js

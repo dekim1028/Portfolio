@@ -11,8 +11,12 @@ const IntroduceBlock = styled.div`
 `;
 
 const Content = styled.div`
-	width: 45%;
+	width: 50%;
 	height: 100%;
+
+	@media (max-width: 768px) {
+		width: 90%;
+	}
 `;
 
 const Title = styled.h1`
@@ -32,12 +36,17 @@ const BasicInfo = styled.div`
 		width: 200px;
 		margin-right: 20px;
 	}
+
+	@media (max-width: 768px) {
+		display: block;
+	}
 `;
 
 const TextBlock = styled.div`
 	margin: 20px 0;
 	p {
 		margin: 10px 0;
+		line-height: 1.6;
 	}
 	a {
 		color: #6e6e6e;

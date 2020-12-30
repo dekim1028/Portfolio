@@ -13,9 +13,13 @@ const OtherExperienceBlock = styled.div`
 `;
 
 const Wrap = styled.div`
-	width: 45%;
+	width: 50%;
 	height: 100%;
 	transform: skewY(5deg);
+
+	@media (max-width: 768px) {
+		width: 90%;
+	}
 `;
 
 const Content = styled.div`
