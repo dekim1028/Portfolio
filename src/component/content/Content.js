@@ -3,6 +3,7 @@ import Introduce from './introduce/Introduce';
 import SkillContainer from '../../container/content/skill/SkillContainer';
 import styled from 'styled-components';
 import WorkExperience from './work/WorkExperience';
+import OtherExperience from './other/OtherExperience';
 
 const ContentBlock = styled.div`
 	min-height: 100vh;
@@ -15,6 +16,7 @@ const Content = () => {
 			<Introduce />
 			<SkillContainer />
 			<WorkExperience />
+			<OtherExperience />
 		</ContentBlock>
 	);
 };
