@@ -62,14 +62,14 @@ const DownBtn = styled(CgPushChevronDown)`
 
 const MenuList = styled.div`
 	width: 90px;
-	height: 380px;
+	height: 310px;
 	background: rgba(0, 0, 0, 0.3);
 	border-radius: 20px;
 	padding: 10px;
 
 	@media (max-width: 768px) {
 		width: 70px;
-		height: 330px;
+		height: 265px;
 	}
 `;
 
@@ -203,18 +203,6 @@ const Menu = ({
 					</SpeechBubble>
 					<MenuItemImage>
 						<FcCommandLine />
-					</MenuItemImage>
-				</MenuItemBlock>
-				<MenuItemBlock
-					href="#contact"
-					onMouseOver={() => onShowSpeechBubble('contact')}
-					onMouseOut={() => onHideSpeechBubble('contact')}
-				>
-					<SpeechBubble className={cn({ show: speechBubble.contact })}>
-						Contact
-					</SpeechBubble>
-					<MenuItemImage>
-						<CgMail />
 					</MenuItemImage>
 				</MenuItemBlock>
 			</MenuList>
