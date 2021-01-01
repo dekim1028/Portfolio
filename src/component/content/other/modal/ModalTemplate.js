@@ -5,6 +5,7 @@ import {
 	AiFillGithub,
 	AiOutlineLink,
 } from 'react-icons/ai';
+import Slideshow from './Slideshow';
 
 const ModalTemplateBlock = styled.div`
 	width: 100vw;
@@ -76,6 +77,11 @@ const Link = styled.a`
 	}
 `;
 
+const Content = styled.div`
+	height: 85%;
+	overflow-y: auto;
+`;
+
 const ModalTemplate = ({ info, onClose, children }) => {
 	if (!info) return null;
 	return (
@@ -99,8 +105,11 @@ const ModalTemplate = ({ info, onClose, children }) => {
 							)}
 						</LinkBlock>
 					</Explain>
+					<Content>
+						<Slideshow images={info.images} />
+						{children}
+					</Content>
 				</ModalBlock>
-				{children}
 			</ModalTemplateWrap>
 		</ModalTemplateBlock>
 	);
