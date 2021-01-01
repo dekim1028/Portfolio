@@ -108,7 +108,7 @@ const ProjectCover = styled.div`
 	}
 `;
 
-const OtherExperience = () => {
+const OtherExperience = ({ onClick }) => {
 	return (
 		<OtherExperienceBlock id="other_exp">
 			<Wrap>
@@ -120,7 +120,7 @@ const OtherExperience = () => {
 							<ProjectWrap>
 								<Project>
 									<img src="/image/content/portfolio/mylog.png" alt="mylog" />
-									<ProjectCover>
+									<ProjectCover onClick={() => onClick('mylog')}>
 										<div>
 											<h3>MyLog</h3>
 											<h4>나만의 크롬 메인 화면</h4>
@@ -134,7 +134,7 @@ const OtherExperience = () => {
 										src="/image/content/portfolio/grinder.png"
 										alt="grinder"
 									/>
-									<ProjectCover>
+									<ProjectCover onClick={() => onClick('grinder')}>
 										<div>
 											<h3>Grinder</h3>
 											<h4>공부벌레를 위한 스터디 플래너</h4>
@@ -145,7 +145,7 @@ const OtherExperience = () => {
 							<ProjectWrap>
 								<Project>
 									<img src="/image/content/portfolio/D.D.png" alt="D.D" />
-									<ProjectCover>
+									<ProjectCover onClick={() => onClick('dd')}>
 										<div>
 											<h3>D.D</h3>
 											<h4>오늘을 기록하는 블로그형 다이어리</h4>
@@ -159,7 +159,7 @@ const OtherExperience = () => {
 										src="/image/content/portfolio/portfolio.jpg"
 										alt="portfolio"
 									/>
-									<ProjectCover>
+									<ProjectCover onClick={() => onClick('portfolio')}>
 										<div>
 											<h3>Portfolio</h3>
 											<h4>포트폴리오 웹사이트</h4>
@@ -178,7 +178,7 @@ const OtherExperience = () => {
 										src="/image/content/portfolio/highthon.jpg"
 										alt="highthon"
 									/>
-									<ProjectCover>
+									<ProjectCover onClick={() => onClick('highthon')}>
 										<div>
 											<h3>HIGHTHON</h3>
 											<h4>고등학생 해커톤 운영진</h4>
@@ -192,7 +192,7 @@ const OtherExperience = () => {
 										src="/image/content/portfolio/volunteer.jpg"
 										alt="volunteer"
 									/>
-									<ProjectCover>
+									<ProjectCover onClick={() => onClick('volunteer')}>
 										<div>
 											<h3>청소년 장기 프로젝트</h3>
 											<h4>장수사진 촬영 봉사단체 운영진</h4>
