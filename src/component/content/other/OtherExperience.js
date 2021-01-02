@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { imageURL } from '../../../lib/ImageAPI';
 
 const OtherExperienceBlock = styled.div`
 	width: 100vw;
@@ -119,7 +120,10 @@ const OtherExperience = ({ onClick }) => {
 						<ProjectBlock>
 							<ProjectWrap>
 								<Project>
-									<img src="/image/content/portfolio/mylog.png" alt="mylog" />
+									<img
+										src={`${imageURL}/content/portfolio/mylog.png`}
+										alt="mylog"
+									/>
 									<ProjectCover onClick={() => onClick('mylog')}>
 										<div>
 											<h3>MyLog</h3>
@@ -131,7 +135,7 @@ const OtherExperience = ({ onClick }) => {
 							<ProjectWrap>
 								<Project>
 									<img
-										src="/image/content/portfolio/grinder.png"
+										src={`${imageURL}/content/portfolio/grinder.png`}
 										alt="grinder"
 									/>
 									<ProjectCover onClick={() => onClick('grinder')}>
@@ -144,7 +148,10 @@ const OtherExperience = ({ onClick }) => {
 							</ProjectWrap>
 							<ProjectWrap>
 								<Project>
-									<img src="/image/content/portfolio/D.D.png" alt="D.D" />
+									<img
+										src={`${imageURL}/content/portfolio/D.D.png`}
+										alt="D.D"
+									/>
 									<ProjectCover onClick={() => onClick('dd')}>
 										<div>
 											<h3>D.D</h3>
@@ -156,7 +163,7 @@ const OtherExperience = ({ onClick }) => {
 							<ProjectWrap>
 								<Project>
 									<img
-										src="/image/content/portfolio/portfolio.jpg"
+										src={`${imageURL}/content/portfolio/portfolio.jpg`}
 										alt="portfolio"
 									/>
 									<ProjectCover onClick={() => onClick('portfolio')}>
@@ -175,7 +182,7 @@ const OtherExperience = ({ onClick }) => {
 							<ProjectWrap>
 								<Project>
 									<img
-										src="/image/content/portfolio/highthon.jpg"
+										src={`${imageURL}/content/portfolio/highthon.jpg`}
 										alt="highthon"
 									/>
 									<ProjectCover onClick={() => onClick('highthon')}>
@@ -189,7 +196,7 @@ const OtherExperience = ({ onClick }) => {
 							<ProjectWrap>
 								<Project>
 									<img
-										src="/image/content/portfolio/volunteer.jpg"
+										src={`${imageURL}/content/portfolio/volunteer.jpg`}
 										alt="volunteer"
 									/>
 									<ProjectCover onClick={() => onClick('volunteer')}>

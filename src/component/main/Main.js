@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { imageURL } from '../../lib/ImageAPI';
 
 const MainBlock = styled.div`
-	background-image: url('/image/common/background.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 `;
@@ -37,11 +37,13 @@ const Text = styled.h1`
 
 const Main = () => {
 	return (
-		<MainBlock>
+		<MainBlock
+			style={{ backgroundImage: `url('${imageURL}/common/background.png')` }}
+		>
 			<ProfileBlock>
 				<div data-aos="fade-up">
 					<ProfileImageBox>
-						<ProfileImage src="/image/common/profile.jpeg" />
+						<ProfileImage src={`${imageURL}/common/profile.jpeg`} />
 					</ProfileImageBox>
 					<Text>Front-End Developer</Text>
 					<Text>Daeun Kim</Text>

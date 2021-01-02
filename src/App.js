@@ -4,7 +4,7 @@ import Page from './pages/Page';
 function App() {
 	return (
 		<>
-			<Route path="/" component={Page} exact />
+			<Route path="/Portfolio" component={Page} exact />
 		</>
 	);
 }

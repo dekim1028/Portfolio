@@ -2,6 +2,7 @@ import React from 'react';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import styled from 'styled-components';
+import { imageURL } from '../../../../lib/ImageAPI';
 
 const SlideshowBlock = styled.div`
 	.each-slide > div {
@@ -25,7 +26,7 @@ const Slideshow = ({ images }) => {
 						<div className="each-slide" key={image}>
 							<div
 								style={{
-									backgroundImage: `url(./image/content/portfolio/slide/${image})`,
+									backgroundImage: `url(${imageURL}/content/portfolio/slide/${image})`,
 								}}
 							/>
 						</div>

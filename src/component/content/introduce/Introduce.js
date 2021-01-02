@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { imageURL } from '../../../lib/ImageAPI';
 
 const IntroduceBlock = styled.div`
 	width: 100vw;
@@ -68,7 +69,7 @@ const Introduce = () => {
 			<Content data-aos="fade-right">
 				<Title>Introduce</Title>
 				<BasicInfo>
-					<img src="/image/common/profile.jpeg" alt="profile" />
+					<img src={`${imageURL}/common/profile.jpeg`} alt="profile" />
 					<div>
 						<TextBlock>
 							<SubTitle>Contact.</SubTitle>
