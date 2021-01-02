@@ -1,8 +1,10 @@
 import React from 'react';
 import MyLogModal from '../../../../component/content/other/modal/MyLogModal';
 import GrinderModal from '../../../../component/content/other/modal/GrinderModal';
-import DDModal from '../../../../component/content/other/modal/GrinderModal';
+import DDModal from '../../../../component/content/other/modal/DDModal';
 import PortfolioModal from '../../../../component/content/other/modal/PortfolioModal';
+import HighthonModal from '../../../../component/content/other/modal/HighthonModal';
+import VolunteerModal from '../../../../component/content/other/modal/VolunteerModal';
 
 const ModalContainer = ({ type, onClose }) => {
 	const info = {
@@ -40,13 +42,30 @@ const ModalContainer = ({ type, onClose }) => {
 		},
 		portfolio: {
 			title: 'Portfolio',
-			explain: 'MacOS 컨셉의 포트폴리오 웹사이트',
+			explain: '포트폴리오 웹사이트',
 			github: 'https://github.com/dekim1028/Portfolio',
 			images: [
 				'Portfolio_1.jpg',
 				'Portfolio_2.jpg',
 				'Portfolio_3.jpg',
 				'Portfolio_4.jpg',
+			],
+		},
+		highthon: {
+			title: 'HIGHTHON',
+			explain: '개발에 관심있는 고등학생을 대상으로 하는 해커톤 운영진',
+			website: 'https://www.facebook.com/highthon/',
+			images: ['Highthon_1.jpg', 'Highthon_2.jpg', 'Highthon_3.jpg'],
+		},
+		volunteer: {
+			title: '청소년 장기 프로젝트',
+			explain: '장수사진 촬영 봉사단체 1,2기 운영진',
+			website: 'https://youthproject2017.modoo.at/',
+			images: [
+				'Volunteer_1.jpg',
+				'Volunteer_2.jpg',
+				'Volunteer_3.jpg',
+				'Volunteer_4.jpg',
 			],
 		},
 	};
@@ -60,6 +79,10 @@ const ModalContainer = ({ type, onClose }) => {
 			return <DDModal info={info.dd} onClose={onClose} />;
 		case 'portfolio':
 			return <PortfolioModal info={info.portfolio} onClose={onClose} />;
+		case 'highthon':
+			return <HighthonModal info={info.highthon} onClose={onClose} />;
+		case 'volunteer':
+			return <VolunteerModal info={info.volunteer} onClose={onClose} />;
 		default:
 			return null;
 	}
