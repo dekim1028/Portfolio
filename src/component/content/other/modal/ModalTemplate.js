@@ -4,6 +4,7 @@ import {
 	AiOutlineCloseCircle,
 	AiFillGithub,
 	AiOutlineLink,
+	AiOutlineCalendar,
 } from 'react-icons/ai';
 import Slideshow from './Slideshow';
 
@@ -47,15 +48,35 @@ const ModalBlock = styled.div`
 	box-shadow: 5px 5px 10px black;
 `;
 
-const Title = styled.h1`
-	margin: 0;
+const Header = styled.div`
+	padding-bottom: 15px;
+	border-bottom: 1px solid;
+`;
+
+const Title = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 30px;
+	font-weight: bold;
+`;
+
+const DateBlock = styled.div`
+	display: flex;
+	align-items: center;
+	font-size: 13px;
+	font-weight: normal;
+	svg {
+		margin-right: 5px;
+		font-size: 20px;
+	}
 `;
 
 const Explain = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 10px 0;
+	padding-top: 10px;
 	color: grey;
 	font-size: 17px;
 	font-weight: 500;
@@ -78,7 +99,8 @@ const Link = styled.a`
 `;
 
 const Content = styled.div`
-	height: 85%;
+	height: 84%;
+	margin-top: 20px;
 	overflow-y: auto;
 `;
 
@@ -89,22 +111,30 @@ const ModalTemplate = ({ info, onClose, children }) => {
 			<ModalTemplateWrap>
 				<CloseBtn onClick={onClose} />
 				<ModalBlock>
-					<Title>{info.title}</Title>
-					<Explain>
-						{info.explain}
-						<LinkBlock>
-							{info.github && (
-								<Link href={info.github} target="new">
-									<AiFillGithub />
-								</Link>
-							)}
-							{info.website && (
-								<Link href={info.website} target="new">
-									<AiOutlineLink />
-								</Link>
-							)}
-						</LinkBlock>
-					</Explain>
+					<Header>
+						<Title>
+							{info.title}
+							<DateBlock>
+								<AiOutlineCalendar />
+								<div>{info.date}</div>
+							</DateBlock>
+						</Title>
+						<Explain>
+							{info.explain}
+							<LinkBlock>
+								{info.github && (
+									<Link href={info.github} target="new">
+										<AiFillGithub />
+									</Link>
+								)}
+								{info.website && (
+									<Link href={info.website} target="new">
+										<AiOutlineLink />
+									</Link>
+								)}
+							</LinkBlock>
+						</Explain>
+					</Header>
 					<Content>
 						<Slideshow images={info.images} />
 						{children}

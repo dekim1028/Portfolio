@@ -11,6 +11,7 @@ const ModalContainer = ({ type, onClose }) => {
 		mylog: {
 			title: 'MyLog',
 			explain: '나만의 크롬 메인화면',
+			date: '2020.11 - 2020.12',
 			github: 'https://github.com/dekim1028/MyLog',
 			website: 'https://mylog.link/',
 			images: [
@@ -25,6 +26,7 @@ const ModalContainer = ({ type, onClose }) => {
 		grinder: {
 			title: 'Grinder',
 			explain: '공부벌레를 위한 스터디 플래너',
+			date: '2020.10 - 2020.11',
 			github: 'https://github.com/dekim1028/Grinder',
 			website: 'http://www.grinders.link/',
 			images: [
@@ -37,12 +39,14 @@ const ModalContainer = ({ type, onClose }) => {
 		dd: {
 			title: 'D.D',
 			explain: '오늘을 기록하는 블로그형 다이어리',
+			date: '2020.09 - 2020.10',
 			github: 'https://github.com/dekim1028/D.D',
 			images: ['DD_1.jpg', 'DD_2.jpg', 'DD_3.jpg'],
 		},
 		portfolio: {
 			title: 'Portfolio',
 			explain: '포트폴리오 웹사이트',
+			date: '2020.12 - 2020.12',
 			github: 'https://github.com/dekim1028/Portfolio',
 			images: [
 				'Portfolio_1.jpg',
@@ -54,12 +58,14 @@ const ModalContainer = ({ type, onClose }) => {
 		highthon: {
 			title: 'HIGHTHON',
 			explain: '개발에 관심있는 고등학생을 대상으로 하는 해커톤 운영진',
+			date: '2018.01 - 2019.02',
 			website: 'https://www.facebook.com/highthon/',
 			images: ['Highthon_1.jpg', 'Highthon_2.jpg', 'Highthon_3.jpg'],
 		},
 		volunteer: {
 			title: '청소년 장기 프로젝트',
 			explain: '장수사진 촬영 봉사단체 1,2기 운영진',
+			date: '2017.01 - 2017.11',
 			website: 'https://youthproject2017.modoo.at/',
 			images: [
 				'Volunteer_1.jpg',
