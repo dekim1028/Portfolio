@@ -112,10 +112,6 @@ const SpeechBubble = styled.div`
 	font-size: 10pt;
 	display: none;
 
-	@media (max-width: 768px) {
-		transform: translate(-25px, 0px);
-	}
-
 	&:before {
 		width: 0;
 		height: 0;

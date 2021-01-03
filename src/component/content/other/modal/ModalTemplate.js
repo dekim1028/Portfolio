@@ -32,19 +32,35 @@ const CloseBtn = styled(AiOutlineCloseCircle)`
 	&:hover {
 		color: black;
 	}
+
+	@media (max-width: 768px) {
+		top: -20px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 30px;
+	}
 `;
 
 const ModalTemplateWrap = styled.div`
 	width: 70%;
-	height: 90%;
+	position: absolute;
+	top: 10%;
+	bottom: 0;
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
 
 const ModalBlock = styled.div`
 	width: 100%;
 	height: 100%;
+	position: absolute;
+	top: 3%;
+	bottom: 0px;
 	padding: 25px;
 	background-color: white;
-	border-radius: 15px;
+	border-radius: 15px 15px 0 0;
 	box-shadow: 5px 5px 10px black;
 `;
 
@@ -100,8 +116,12 @@ const Link = styled.a`
 
 const Content = styled.div`
 	height: 84%;
-	margin-top: 20px;
+	margin: 20px 0;
 	overflow-y: auto;
+
+	@media (max-width: 768px) {
+		height: 360px;
+	}
 `;
 
 const ModalTemplate = ({ info, onClose, children }) => {
@@ -136,8 +156,10 @@ const ModalTemplate = ({ info, onClose, children }) => {
 						</Explain>
 					</Header>
 					<Content>
-						<Slideshow images={info.images} />
-						{children}
+						<div>
+							<Slideshow images={info.images} />
+							{children}
+						</div>
 					</Content>
 				</ModalBlock>
 			</ModalTemplateWrap>

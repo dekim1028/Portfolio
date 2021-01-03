@@ -6,13 +6,17 @@ import { imageURL } from '../../../../lib/ImageAPI';
 
 const SlideshowBlock = styled.div`
 	.each-slide > div {
+		height: 350px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
-		height: 350px;
+
+		@media (max-width: 768px) {
+			height: 200px;
+		}
 	}
 `;
 
