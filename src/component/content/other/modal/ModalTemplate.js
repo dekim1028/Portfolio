@@ -75,6 +75,10 @@ const Title = styled.div`
 	justify-content: space-between;
 	font-size: 30px;
 	font-weight: bold;
+
+	@media (max-width: 768px) {
+		font-size: 25px;
+	}
 `;
 
 const DateBlock = styled.div`
