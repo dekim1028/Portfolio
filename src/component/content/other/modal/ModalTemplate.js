@@ -115,12 +115,12 @@ const Link = styled.a`
 `;
 
 const Content = styled.div`
-	height: 84%;
+	height: 70vh;
 	margin: 20px 0;
 	overflow-y: auto;
 
 	@media (max-width: 768px) {
-		height: 360px;
+		height: 63vh;
 	}
 `;
 
