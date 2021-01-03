@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import {
 	AiOutlineCloseCircle,
@@ -129,6 +129,13 @@ const Content = styled.div`
 `;
 
 const ModalTemplate = ({ info, onClose, children }) => {
+	useEffect(() => {
+		document.body.style.overflow = 'hidden';
+		return () => {
+			document.body.style.overflowY = 'scroll';
+		};
+	}, []);
+
 	if (!info) return null;
 	return (
 		<ModalTemplateBlock>

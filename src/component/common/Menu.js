@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import cn from 'classnames';
-import { CgPushChevronDown, CgMail } from 'react-icons/cg';
+import { CgPushChevronDown } from 'react-icons/cg';
 import {
 	FcVoicePresentation,
 	FcBriefcase,
