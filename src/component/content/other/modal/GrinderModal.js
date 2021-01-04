@@ -58,6 +58,17 @@ const GrinderModal = ({ info, onClose }) => {
 					</TextBlock>
 				</Block>
 				<Block>
+					<h2>Development Content</h2>
+					<TextBlock>
+						<ul>
+							<li>redux를 통한 상태관리</li>
+							<li>redux-saga를 통한 비동기 처리 구현</li>
+							<li>REST API 구현 및 호출</li>
+							<li>Victory 통계 라이브러리 사용</li>
+						</ul>
+					</TextBlock>
+				</Block>
+				<Block>
 					<h2>Tech Stack</h2>
 					<TextBlock>
 						<Wrap>

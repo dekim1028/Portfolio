@@ -72,6 +72,7 @@ const WorkList = styled.ul`
 
 const WorkListItem = styled.li`
 	margin: 10px 0;
+	line-height: 1.5;
 `;
 
 const WorkExperience = () => {
@@ -101,8 +102,9 @@ const WorkExperience = () => {
 									JSP, Spring 등을 사용하여 그룹웨어 솔루션 개발
 								</WorkListItem>
 								<WorkListItem>
-									고객사에 맞는 customizing형 그룹웨어 개발/배포/운영 (오뚜기,
-									부영그룹, 인탑스, SM하이플러스 등)
+									고객사에 맞는 customizing형 그룹웨어 개발/배포/운영
+									<br />
+									(오뚜기, 부영그룹, 인탑스, SM하이플러스 등)
 								</WorkListItem>
 								<WorkListItem>
 									ERP, HR, 메산저, 통합검색 등의 3rd Party 연동 기능 개발

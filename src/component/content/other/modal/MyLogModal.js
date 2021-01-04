@@ -50,6 +50,22 @@ const MyLogModal = ({ info, onClose }) => {
 					</TextBlock>
 				</Block>
 				<Block>
+					<h2>Development Content</h2>
+					<TextBlock>
+						<ul>
+							<li>
+								react-draggable, rc-color-picker 등 다양한 라이브러리 활용
+							</li>
+							<li>styled-components를 이용한 컴포넌트 스타일링</li>
+							<li>
+								openweathermap API와 weather-icons를 연결하여 날씨 변화를
+								가시적으로 확인할 수 있도록 구현
+							</li>
+							<li>Github Pages 호스팅</li>
+						</ul>
+					</TextBlock>
+				</Block>
+				<Block>
 					<h2>Tech Stack</h2>
 					<TextBlock>
 						<h3>Front-end</h3>

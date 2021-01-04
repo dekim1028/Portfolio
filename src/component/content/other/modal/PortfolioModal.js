@@ -49,6 +49,16 @@ const PortfolioModal = ({ info, onClose }) => {
 					</TextBlock>
 				</Block>
 				<Block>
+					<h2>Development Content</h2>
+					<TextBlock>
+						<ul>
+							<li>반응형 웹사이트 구현을 위한 Media Queries 사용</li>
+							<li>styled-components를 이용한 컴포넌트 스타일링</li>
+							<li>Card Style List 구현</li>
+						</ul>
+					</TextBlock>
+				</Block>
+				<Block>
 					<h2>Tech Stack</h2>
 					<TextBlock>
 						<h3>Front-end</h3>
