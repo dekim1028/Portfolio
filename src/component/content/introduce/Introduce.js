@@ -74,7 +74,7 @@ const Introduce = () => {
 						<TextBlock>
 							<SubTitle>Contact.</SubTitle>
 							<p>
-								Phone. <b className="selectable">010-7748-7247</b>
+								Phone. <b className="selectable">010-0000-0000</b>
 							</p>
 							<p>
 								Email. <b className="selectable">daeun2351@naver.com</b>
