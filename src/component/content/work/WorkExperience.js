@@ -83,8 +83,39 @@ const WorkExperience = () => {
 					<Title>Work Experience</Title>
 					<ExperienceBlock>
 						<SubTitle
+							href="https://buyaladdin.com/kr"
+							target="_blank"
+						>
+							Buyaladdin R&D
+						</SubTitle>
+						<p className="explain">
+							코인 관련 IT Service 전문 연구 개발 센터
+						</p>
+						<WorkExplainBlock>
+							<div className="info">
+								<h3>Frontend Developer</h3>
+								<p>2021.01 ~ 재직중</p>
+							</div>
+							<WorkList>
+								<WorkListItem>
+									Android / iOS 기반 어플을 react native를 사용한 Cross Platform 앱으로 전환
+								</WorkListItem>
+								<WorkListItem>
+									초기 기획부터 출시까지 참여하여 플레이스토어 5만회 다운로드 달성
+								</WorkListItem>
+								<WorkListItem>
+									마일리지/비트코인/이더리움 등 다양한 결제수단을 이용한 쇼핑기능 개발
+								</WorkListItem>
+								<WorkListItem>
+									Sentry, Slack 등의 모니터링 시스템 적용
+								</WorkListItem>
+							</WorkList>
+						</WorkExplainBlock>
+					</ExperienceBlock>
+					<ExperienceBlock>
+						<SubTitle
 							href="https://www.covision.co.kr/main/index.asp"
-							target="new"
+							target="_blank"
 						>
 							코비젼
 						</SubTitle>

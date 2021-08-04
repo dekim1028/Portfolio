@@ -157,20 +157,20 @@ const Skill = ({ menu, onMouseOverMenu, onMouseOutMenu }) => {
 								React.js
 							</Item>
 							<Item>
+								<SiReact />
+								React Native
+							</Item>
+							<Item>
 								<SiJavascript />
 								JavaScript
 							</Item>
 							<Item>
 								<SiHtml5 />
-								HTML/CSS
+								HTML / CSS
 							</Item>
 							<Item>
 								<SiGithub />
 								Github
-							</Item>
-							<Item>
-								<SiAmazonaws />
-								AWS (EC2, Route53)
 							</Item>
 							<Item>
 								<SiMysql />
@@ -192,16 +192,12 @@ const Skill = ({ menu, onMouseOverMenu, onMouseOutMenu }) => {
 									/>
 								</SubTitle>
 								<SpeechBubble className={cn({ show: menu.soft })}>
-									기초 지식 습득 후 복습이 필요한 기술
+									습득 후 복습이 필요한 기술
 								</SpeechBubble>
 							</div>
 							<Item>
 								<SiNodeDotJs />
 								Node.js
-							</Item>
-							<Item>
-								<SiMongodb />
-								MongoDB
 							</Item>
 							<Item>
 								<SiJava />
@@ -210,6 +206,14 @@ const Skill = ({ menu, onMouseOverMenu, onMouseOutMenu }) => {
 							<Item>
 								<SiSpring />
 								Spring
+							</Item>
+							<Item>
+								<SiAmazonaws />
+								AWS (EC2, Route53)
+							</Item>
+							<Item>
+								<SiTypescript />
+								TypeScript
 							</Item>
 						</SkillListItem>
 						<SkillListItem>
@@ -231,8 +235,8 @@ const Skill = ({ menu, onMouseOverMenu, onMouseOutMenu }) => {
 								Vue.js
 							</Item>
 							<Item>
-								<SiTypescript />
-								TypeScript
+								<SiMongodb />
+								MongoDB
 							</Item>
 						</SkillListItem>
 					</SkillList>

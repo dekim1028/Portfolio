@@ -5,6 +5,7 @@ import DDModal from '../../../../component/content/other/modal/DDModal';
 import PortfolioModal from '../../../../component/content/other/modal/PortfolioModal';
 import HighthonModal from '../../../../component/content/other/modal/HighthonModal';
 import VolunteerModal from '../../../../component/content/other/modal/VolunteerModal';
+import PickMapModal from '../../../../component/content/other/modal/PickMapModal';
 
 const ModalContainer = ({ type, onClose }) => {
 	const info = {
@@ -55,6 +56,16 @@ const ModalContainer = ({ type, onClose }) => {
 				'Portfolio_4.jpg',
 			],
 		},
+		pickmap:{
+			title: 'PickMap',
+			explain: '네이버 지도 즐겨찾기',
+			date: '2021.07 - 진행중',
+			github: 'https://github.com/front-side-project/NaverMapClone',
+			images: [
+				'PickMap_1.png',
+				'PickMap_2.png',
+			],
+		},
 		highthon: {
 			title: 'HIGHTHON',
 			explain: '개발에 관심있는 고등학생을 대상으로 하는 해커톤 운영진',
@@ -73,7 +84,7 @@ const ModalContainer = ({ type, onClose }) => {
 				'Volunteer_3.jpg',
 				'Volunteer_4.jpg',
 			],
-		},
+		}
 	};
 
 	switch (type) {
@@ -85,6 +96,8 @@ const ModalContainer = ({ type, onClose }) => {
 			return <DDModal info={info.dd} onClose={onClose} />;
 		case 'portfolio':
 			return <PortfolioModal info={info.portfolio} onClose={onClose} />;
+		case 'pickmap':
+				return <PickMapModal info={info.pickmap} onClose={onClose} />;
 		case 'highthon':
 			return <HighthonModal info={info.highthon} onClose={onClose} />;
 		case 'volunteer':

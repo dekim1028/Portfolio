@@ -47,24 +47,20 @@ const SubTitle = styled.h2`
 
 const ProjectBlock = styled.div`
 	margin: 0 auto;
+	justify-content:space-around;
 	margin-top: 20px;
 
-	&:after {
-		content: '';
-		display: table;
-		clear: both;
-	}
 `;
 
 const ProjectWrap = styled.div`
-	width: 50%;
-	padding: 10px;
-	float: left;
+    width: calc(50% - 20px);
+	display:inline-block;
+    margin: 10px;
 
 	@media (max-width: 768px) {
 		width: 100%;
 		display: block;
-		margin-bottom: 20px;
+		margin: 0 0 20px 0;
 	}
 `;
 
@@ -76,6 +72,7 @@ const Project = styled.div`
 
 	img {
 		width: 100%;
+		min-height: 300px;
 	}
 `;
 
@@ -118,6 +115,20 @@ const OtherExperience = ({ onClick }) => {
 					<ExperienceBlock>
 						<SubTitle>Side Project.</SubTitle>
 						<ProjectBlock>
+							<ProjectWrap>
+								<Project>
+									<img
+										src={`${imageURL}/content/portfolio/pickmap.png`}
+										alt="pickmap"
+									/>
+									<ProjectCover onClick={() => onClick('pickmap')}>
+										<div>
+											<h3>PickMap</h3>
+											<h4>네이버 지도 즐겨찾기</h4>
+										</div>
+									</ProjectCover>
+								</Project>
+							</ProjectWrap>
 							<ProjectWrap>
 								<Project>
 									<img
